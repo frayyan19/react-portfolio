@@ -2,13 +2,21 @@ html {
   font-size: 62.5%;
 }
 
-body {
+body{
+  width: 100%;
+  height: 100vh;
   margin: 0;
   font: 300 11px/1.4 'Helvetica Neue', 'sans-serif';
-  color: #444;
-  background: #374f35;
-  overflow: hidden;
+  overflow-y: auto;
   display: block;
+  overscroll-behavior: none;
+  background: linear-gradient(
+    to right,
+    #508a69 0%,
+    #508a69 40%,
+    rgb(117, 173, 139) 40%,
+    rgb(117, 173, 139) 100%
+  );
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

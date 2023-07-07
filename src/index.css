@@ -10,13 +10,25 @@ body{
   overflow-y: auto;
   display: block;
   overscroll-behavior: none;
-  background: linear-gradient(
-    to right,
-    #508a69 0%,
-    #508a69 40%,
-    rgb(117, 173, 139) 40%,
-    rgb(117, 173, 139) 100%
-  );
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: rgb(117, 173, 139);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background: linear-gradient(
+      to right,
+      #508a69 0%,
+      #508a69 40%,
+      rgb(117, 173, 139) 40%,
+      rgb(117, 173, 139) 100%
+    );
+  }
+}
+

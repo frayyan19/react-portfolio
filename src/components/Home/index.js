@@ -24,6 +24,10 @@ const Home = () => {
         <>
         <div className="container home-page">
             <Layout/>
+
+            <div className="img-zone">
+                <img src={LogoS} alt='logo'/>
+            </div>
             <div className="text-zone">
 
                 <h1>
@@ -38,9 +42,6 @@ const Home = () => {
                 </h1>
                 <h2>Software Developer / Mechanical Engieneer</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
-            </div>
-            <div className="img-zone">
-                <img src={LogoS} alt='logo'/>
             </div>
         </div>
         <Loader type='pacman' />

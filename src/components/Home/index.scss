@@ -2,6 +2,14 @@
 
 
     @media only screen and (min-width: 768px) {
+        .text-zone {
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40%;
+            max-height: 90%;
+        }
         .img-zone {
             float: right;
             position: absolute;
@@ -21,35 +29,76 @@
                 background-color: #508a69;
             }
         }
+        .flat-button {
+            color:#181818;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            font-family: sans-serif;
+            text-decoration: none;
+            padding: 10px 18px;
+            border: 1px solid #181818;
+            margin-top: 25px;
+            float: left;
+            animation: fadeIn 1s 1.8s backwards;
+            white-space: nowrap;
+        
+            &:hover {
+                background: rgb(117, 173, 139) ;
+                color: #181818;
+            }
+        }
       }
       
     @media only screen and (max-width: 768px) {
-        .img-zone {
-            float: top;
-            position: relative;
+        .text-zone {
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            height: auto;
+            justify-content: center;
             align-items: center;
-            width: 40%;
-            max-height: 90%;
+            margin: auto;
+            text-align: center;
+            padding-top: 10%;
+        }
+        .flat-button {
+            color:#181818;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            font-family: sans-serif;
+            text-decoration: none;
+            padding: 10px 18px;
+            border: 1px solid #181818;
+            margin-top: 25px;
+            float: middle;
+            animation: fadeIn 1s 1.8s backwards;
+            white-space: nowrap;
+        
+            &:hover {
+                background: rgb(117, 173, 139) ;
+                color: #181818;
+            }
+        }
+
+        .img-zone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
     
             img {
+                margin-top: 5%;
+                max-width: 300px;
+                width: 50%;
                 border-radius: 5%;
                 padding: 10px;
-                max-width: 300px;
-                height: auto;
-                display: block;
+                margin-left:auto;
+                margin-right:auto;
                 box-shadow: 12px 12px 2px 1px rgb(32, 68, 53);
                 background-color: #508a69;
             }
         }
-    }
-
-    .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40%;
-        max-height: 90%;
     }
     h1 {
         color: #fff;
@@ -57,16 +106,6 @@
         margin: 0;
         font-family: 'Coolvetica';
         font-weight: 400;
-
-        img {
-            width: 32px;
-            margin-left: 20px;
-            opacity: 0;
-            height: auto;
-            animation: rotateIn 1s linear both;
-            animation-delay: 1.4s;
-
-        }
     }
 }
 
@@ -80,22 +119,3 @@ h2 {
     animation: fadeIn 1s 1.8s backwards;
 }
 
-.flat-button {
-    color:#181818;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    font-family: sans-serif;
-    text-decoration: none;
-    padding: 10px 18px;
-    border: 1px solid #181818;
-    margin-top: 25px;
-    float: left;
-    animation: fadeIn 1s 1.8s backwards;
-    white-space: nowrap;
-
-    &:hover {
-        background: rgb(117, 173, 139) ;
-        color: #181818;
-    }
-}

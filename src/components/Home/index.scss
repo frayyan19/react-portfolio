@@ -2,14 +2,14 @@
 
 
     @media only screen and (min-width: 768px) {
-        .text-zone {
-            position: absolute;
-            left: 10%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40%;
-            max-height: 90%;
-        }
+        // .text-zone {
+        //     position: absolute;
+        //     left: 10%;
+        //     top: 50%;
+        //     transform: translateY(-50%);
+        //     width: 40%;
+        //     max-height: 90%;
+        // }
         .img-zone {
             float: right;
             position: absolute;
@@ -39,7 +39,6 @@
             padding: 10px 18px;
             border: 1px solid #181818;
             margin-top: 25px;
-            float: left;
             animation: fadeIn 1s 1.8s backwards;
             white-space: nowrap;
         
@@ -51,17 +50,17 @@
       }
       
     @media only screen and (max-width: 768px) {
-        .text-zone {
-            display: inline-block;
-            position: absolute;
-            width: 100%;
-            height: auto;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            text-align: center;
-            padding-top: 10%;
-        }
+        // .text-zone {
+        //     display: inline-block;
+        //     position: absolute;
+        //     width: 100%;
+        //     height: auto;
+        //     justify-content: center;
+        //     align-items: center;
+        //     margin: auto;
+        //     text-align: center;
+        //     padding-top: 10%;
+        // }
         .flat-button {
             color:#181818;
             font-size: 13px;

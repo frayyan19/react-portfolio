@@ -32,6 +32,7 @@ const Contact = () => {
     <>
         <Layout/>
         <div className='container contact-page'>
+            <div className='row col3'>
             <div className='text-zone'>
                 <h1>
                     <AnimatedLetters 
@@ -39,7 +40,6 @@ const Contact = () => {
                     strArray={['C','o','n','t','a','c','t',' ','M', 'e']} 
                     idx={15}
                     />
-
                 </h1>
                 <div className='contact-form'>
                     <form ref={refForm} onSubmit={sendEmail}>
@@ -63,6 +63,8 @@ const Contact = () => {
                     </form>
 
                 </div>
+            </div>
+
             </div>
         </div>
         <Loader type="pacman"/>

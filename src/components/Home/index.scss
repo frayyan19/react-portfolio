@@ -1,4 +1,4 @@
-.home-page {
+// .home-page {
 
 
     @media only screen and (min-width: 768px) {
@@ -10,25 +10,25 @@
         //     width: 40%;
         //     max-height: 90%;
         // }
-        .img-zone {
-            float: right;
-            position: absolute;
-            right: 5%;
-            top: 40%;
-            transform: translateY(-50%);
-            width: 40%;
-            max-height: 90%;
+        // .img-zone {
+            // float: right;
+            // position: absolute;
+            // right: 5%;
+            // top: 40%;
+            // transform: translateY(-50%);
+            // width: 40%;
+            // max-height: 90%;
     
             img {
                 border-radius: 5%;
                 padding: 10px;
                 max-width: 400px;
                 height: auto;
-                display: block;
+                // display: block;
                 box-shadow: 12px 12px 2px 1px rgb(32, 68, 53);
                 background-color: #508a69;
             }
-        }
+        // }
         .flat-button {
             color:#181818;
             font-size: 13px;
@@ -106,7 +106,7 @@
         font-family: 'Coolvetica';
         font-weight: 400;
     }
-}
+// }
 
 h2 {
     color: #181818;
@@ -115,6 +115,6 @@ h2 {
     font-size: 14px;
     font-family: sans-serif;
     letter-spacing: 3px;
-    animation: fadeIn 1s 1.8s backwards;
+    animation: fadeIn 1s 1s backwards;
 }
 

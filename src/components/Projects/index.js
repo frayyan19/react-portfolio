@@ -5,7 +5,7 @@ import Layout from '../Layout';
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useState } from 'react';
 import { Loader } from 'react-loaders'
-import './design.css'
+import './design.scss'
 
 
 

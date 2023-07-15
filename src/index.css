@@ -23,12 +23,12 @@ body{
 }
   body {
     background-color: rgb(117, 173, 139);
+    overflow-x: hidden;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .text-zone {
-    /* text-align: center; */
     justify-content: center;
     align-items: center;
     margin: auto;

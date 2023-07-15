@@ -6,6 +6,7 @@ import AnimatedLetters from '../AnimatedLetters';
 import React, { useState, useEffect} from 'react';
 import Loader from 'react-loaders';
 import LogoS from '../../assets/images/FadeyProfile.jpg'
+import '../../grid.css'
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -21,10 +22,12 @@ const Home = () => {
         <>
         <div className="container home-page">
             <Layout/>
-            <div className="img-zone">
-                <img src={LogoS} alt='logo'/>
+            <div className="row">
+                <div className='col12'>
+                     <img src={LogoS} alt='logo'/>
+                </div>
             </div>
-            <div className='row col1'>
+            <div className='row'>
                 <div className="text-zone">
                     <h1>
                     <span className={letterClass}>H</span>

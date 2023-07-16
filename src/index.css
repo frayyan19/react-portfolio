@@ -1,21 +1,39 @@
 html {
   font-size: 62.5%;
 }
+img {
+  max-width: 100%;
+}
+
 
 body{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   margin: 0;
   font: 300 11px/1.4 'Helvetica Neue', 'sans-serif';
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
   display: block;
   overscroll-behavior: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(27, 27, 27);
+  /* background: linear-gradient(
+    to right,
+    #508a69 0%,
+    #237e4a 100%,
+    rgb(41, 55, 46) 30%,
+    rgb(41, 55, 46) 50%,
+    rgb(43, 49, 45) 70%,
+    rgb(43, 49, 45)  100%
+  ); */
 }
 
-@media only screen and (max-width: 768px) {
+p, h1, h2, a{
+  color: rgb(255, 255, 255);
+}
+
+/* @media only screen and (max-width: 768px) {
   .text-zone {
     float: center;
     justify-content: center;
@@ -25,9 +43,9 @@ body{
     background-color: rgb(117, 173, 139);
     overflow-x: hidden;
   }
-}
+} */
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .text-zone {
     justify-content: center;
     align-items: center;
@@ -49,5 +67,5 @@ body{
       rgb(117, 173, 139) 100%
     );
   }
-}
+} */
 

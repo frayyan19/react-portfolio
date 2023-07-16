@@ -31,17 +31,18 @@ const Contact = () => {
     return (
     <>
         <Layout/>
-        <div className='container contact-page'>
-            <div className='row col3'>
-            <div className='text-zone'>
-                <h1>
-                    <AnimatedLetters 
-                    letterClass={letterClass}
-                    strArray={['C','o','n','t','a','c','t',' ','M', 'e']} 
-                    idx={15}
-                    />
-                </h1>
+        <div className='container'>
+            <div className='row'>
+            <div className='col6'>
+
                 <div className='contact-form'>
+                    <h1>
+                        <AnimatedLetters 
+                        letterClass={letterClass}
+                        strArray={['C','o','n','t','a','c','t',' ','M', 'e']} 
+                        idx={15}
+                        />
+                    </h1>
                     <form ref={refForm} onSubmit={sendEmail}>
                         <ul>
                             <li className='half'>

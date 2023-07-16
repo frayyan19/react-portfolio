@@ -18,12 +18,12 @@ const About = () => {
     
     return (
         <>
-        <div className='container about-page'>
+        <div className='container'>
             <Layout/>
             <div className='row'>
-                <div className='col12'>
-                    <div className='sm-about'>
-                    <div className='text-zone'>
+                <div className='col6'>
+                    <div>
+                    <div className='tile-large'>
                         <h1>
                             <AnimatedLetters
                                 letterClass={letterClass}
@@ -40,9 +40,10 @@ const About = () => {
 
                     </div>
                 </div>
+                    <embed className="col6 doc-zone" src={resumePDF} type="application/pdf"/>
             </div>
             <div className='row'>
-                <embed className="col12 doc-zone" src={resumePDF} type="application/pdf"/>
+                
             </div>
         </div>
         <Loader type='pacman'/>

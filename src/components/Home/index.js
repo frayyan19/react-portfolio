@@ -6,6 +6,7 @@ import AnimatedLetters from '../AnimatedLetters';
 import React, { useState, useEffect} from 'react';
 import Loader from 'react-loaders';
 import LogoS from '../../assets/images/FadeyProfile.jpg'
+import Projects from "../Projects"
 import '../../grid.css'
 
 const Home = () => {
@@ -20,14 +21,57 @@ const Home = () => {
 
     return (
         <>
-        <div className="container home-page">
-            <Layout/>
-            <div className="row">
+        <div className='container'>
+            <div className='row'>
                 <div className='col12'>
-                     <img src={LogoS} alt='logo'/>
+                    <h1 className='title'>
+                        <span className={letterClass}>H</span>
+                        <span className={`${letterClass} _12`}>i, </span>
+                        <span className={`${letterClass} _13`}>I</span>
+                        <span className={`${letterClass} _14`}>'m </span>
+                        <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15}/>
+                        <br/>
+                        <h2>Software Developer / Mechanical Engieneer</h2>
+                    </h1>
                 </div>
             </div>
+            {/* <div className='row tile-large'>
+                
+            </div> */}
             <div className='row'>
+                <div className='col8'>
+                    <div className='tile-large1'>
+
+                        <img className="photo" src={LogoS} alt='logo'/>
+                        <h1>Overview</h1>
+                        <p>Manufacturing Engineer at General Motors with a passion for new technology and design, I thrive on delivering solutions to complex problems while pushing boundaries to innovate. With a major in Mechanical Engineering and minors in Computer Science and Entrepreneurship, I am dedicated to revolutionizing the field through transformative ideas and technology. Ready to contribute my skills and creativity to drive innovation and impact.</p>
+                    </div>
+                </div>
+                <div className='col4'>
+                    <div>
+                        <Link to="/about" className='tile-small2'><h1>About Me</h1></Link>
+                    </div>
+                    <div>
+                        <Link to="/contact" className='tile-small2'><h1>Contact Me</h1></Link>
+                    </div>
+                </div>
+                <div className='row'>
+                    <div className='col11'>
+                        <div>
+                            <Link to="/projects" className='tile-small3'><h1>Projects</h1></Link>
+                            {/* <h1>hey</h1> */}
+                            {/* <img className="photo" src={LogoS} alt='logo'/> */}
+                        </div>
+                    </div>
+                    <div className='col1'>
+                        <Projects></Projects>
+                    </div>
+                </div>
+                {/* <div className='col7'>
+                     <h1>Hi I'm Fadey Rayyan</h1>
+                </div> */}
+            </div>
+            {/* <div className='row'>
                 <div className="text-zone">
                     <h1>
                     <span className={letterClass}>H</span>
@@ -42,7 +86,7 @@ const Home = () => {
                     <h2>Software Developer / Mechanical Engieneer</h2>
                     <Link to="/contact" className='flat-button'>CONTACT ME</Link>
                 </div>
-            </div>
+            </div> */}
         </div>
         <Loader type='pacman' />
         </>

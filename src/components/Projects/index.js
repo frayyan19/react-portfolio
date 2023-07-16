@@ -1,6 +1,6 @@
 import './index.scss'
 import Layout from '../Layout';
-// import RPS from '../../assets/images/RPS.png'
+import RPS from '../../assets/images/RPS.png'
 // import SortMe from '../../assets/images/SortMe.png'
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useState } from 'react';
@@ -112,7 +112,7 @@ const Projects = () => {
 <>
 <Layout/>
 <div className='container projects-page' onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
-    <div className='text-zone'>
+    {/* <div className='text-zone'>
                 <h1>
                     <AnimatedLetters
                         letterClass={letterClass}
@@ -121,14 +121,19 @@ const Projects = () => {
                     />
                 </h1>
                 <p>Here you will see the various prokects I have completed and some that are ongoing with my development as a software developer.</p>
-    </div>
+    </div> */}
 
     <div className="row">
         <div className='col7'>
         <ul className="list" onClick={(e) => slide(e.target)}>
             <li className="hide"></li>
             <li className="prev"></li>
-            <li className="act"></li>
+            <li className="act">
+              <a target="blank" rel='noreferrer' href='https://rps-topaz.vercel.app/'>
+              <img src={RPS} alt='rps'></img>
+           {/* <p>RPS is a simple project with calls to Socket JS to establisha winner and loser 
+           between a computer picking Rock Paper Scissors and a human. Later, add ons would be online multiplayer with friends.</p> */}
+        </a></li>
             <li className="next"></li>
             <li className="next new-next"></li>
             </ul>

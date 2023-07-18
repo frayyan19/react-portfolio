@@ -1,164 +1,85 @@
-import './index.scss'
+import './index.scss';
+import AnimatedLetters from '../AnimatedLetters'
 import Layout from '../Layout';
-import RPS from '../../assets/images/RPS.png'
-// import SortMe from '../../assets/images/SortMe.png'
-import AnimatedLetters from '../AnimatedLetters';
+import Loader from 'react-loaders';
 import { useEffect, useState } from 'react';
-import { Loader } from 'react-loaders'
-import './design.scss'
+import RPS from '../../assets/images/RPS.png'
+import SortMe from '../../assets/images/SortMe.png'
 
-
-
-const $ = selector => {
-    return document.querySelector(selector);
-  };
-  
-  const next = () => {
-    if ($(".hide")) {
-      $(".hide").remove(); 
-    }
-  
-    /* Step */
-  
-    if ($(".prev")) {
-      $(".prev").classList.add("hide");
-      $(".prev").classList.remove("prev");
-    }
-  
-    $(".act").classList.add("prev");
-    $(".act").classList.remove("act");
-  
-    $(".next").classList.add("act");
-    $(".next").classList.remove("next");
-  
-    /* New Next */
-  
-    $(".new-next").classList.remove("new-next");
-  
-    const addedEl = document.createElement('li');
-  
-    $(".list").appendChild(addedEl);
-    addedEl.classList.add("next","new-next");
-  }
-  
-  const prev = () => {
-    $(".new-next").remove();
-      
-    /* Step */
-  
-    $(".next").classList.add("new-next");
-  
-    $(".act").classList.add("next");
-    $(".act").classList.remove("act");
-  
-    $(".prev").classList.add("act");
-    $(".prev").classList.remove("prev");
-  
-    /* New Prev */
-  
-    $(".hide").classList.add("prev");
-    $(".hide").classList.remove("hide");
-  
-    const addedEl = document.createElement('li');
-  
-    $(".list").insertBefore(addedEl, $(".list").firstChild);
-    addedEl.classList.add("hide");
-  }
-  
-  const slide = element => {
-    /* Next slide */
-    
-    if (element.classList.contains('next')) {
-      next();
-      
-    /* Previous slide */
-      
-    } else if (element.classList.contains('prev')) {
-      prev();
-    }
-  }
-  
 
 const Projects = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
-    const [touchStart, setTouchStart] = useState(0);
-    const [touchEnd, setTouchEnd] = useState(0);
 
-    function handleTouchStart(e) {
-        setTouchStart(e.targetTouches[0].clientX);
-    }
-
-    function handleTouchMove(e) {
-        setTouchEnd(e.targetTouches[0].clientX);
-    }
-
-    function handleTouchEnd() {
-        if (touchStart - touchEnd > 150) {
-            // do your stuff here for left swipe
-            next();
-        }
-
-        if (touchStart - touchEnd < -150) {
-            // do your stuff here for right swipe
-            prev();
-        }
-    }
     useEffect(() => {
         setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
     }, [])
-    return(
-<>
-<Layout/>
-<div className='container projects-page' onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
-    {/* <div className='text-zone'>
-                <h1>
-                    <AnimatedLetters
-                        letterClass={letterClass}
-                        strArray={['P','r','o','j','e','c','t','s']}
-                        idx={15}
-                    />
-                </h1>
-                <p>Here you will see the various prokects I have completed and some that are ongoing with my development as a software developer.</p>
-    </div> */}
-
-    <div className="row">
-        <div className='col7'>
-        <ul className="list" onClick={(e) => slide(e.target)}>
-            <li className="hide"></li>
-            <li className="prev"></li>
-            <li className="act">
-              <a target="blank" rel='noreferrer' href='https://rps-topaz.vercel.app/'>
-              <img src={RPS} alt='rps'></img>
-           {/* <p>RPS is a simple project with calls to Socket JS to establisha winner and loser 
-           between a computer picking Rock Paper Scissors and a human. Later, add ons would be online multiplayer with friends.</p> */}
-        </a></li>
-            <li className="next"></li>
-            <li className="next new-next"></li>
-            </ul>
-            <div className="swipe" ></div>
+    return  (      
+    <>
+    <div className='container'>
+        <Layout/>
+        <div className='row'>
+            <div className='col12'>
+                        <h1 className='title'>
+                            <AnimatedLetters
+                                letterClass={letterClass}
+                                strArray={['P','r','o','j','e','c','t','s']}
+                                idx={15}
+                            />
+                        </h1>
+                    </div>
+        </div>
+        <div className='row'>
+            <div className='col12'>
+                <div className='tile-large7'>
+                                      
+                    <a target="blank" rel='noreferrer' href='https://rps-topaz.vercel.app/'>
+                        <img className="photo1" src={RPS} alt='rps'/>
+                    </a>
+                    <h1>Rock Paper Scissors</h1>
+                    <p>RPS is a Web Application developed using the framework NextJS.
+                         This was a learning project for me to learn the ins and outs of NextJS.
+                          The concept is simple you are able to verse a computer in a game of rock, paper, scissors..definitley harder than versing a human face to face.
+                           This fun yet simple game is currently being reimagined for an onlime serverless version
+                            that would connect 2 players in a lobby and allow them to verse eachother in an RPS battle.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div className='row'>
+            <div className='col12'>
+                <div className='tile-large7'>
+                <a target="blank" rel='noreferrer' href='https://sort-me.vercel.app/'>
+                        <img className="photo1" src={SortMe} alt='sortme'></img>
+                    </a>
+                    <h1>Sort Me</h1>
+                    <p>Sort Me is a Web Application using NextJS as its framework. 
+                        I wanted to display my knowledge of algorithms and specfically sorting algorithms.
+                         In Sort Me you can traverse through different sorting algorithms from Bubble sort to Selction Sort and more. 
+                         It'll also allow you to understand an visualize what each alogirthm does and in realtime displays the speed at which they run.</p>
+                </div>
+            </div>
+        </div>
+        <div className='row'>
+            <div className='col12'>
+                <div className='tile-large7'>
+                    <a target="blank" rel='noreferrer' href='https://sort-me.vercel.app/'>
+                        <img className="photo1" src={SortMe} alt='sortme'></img>
+                    </a>
+                    <h1>Sort Me</h1>
+                    <p>I am a Manufacturing Engineer at General Motors with a passion for new technology and software, 
+                        I thrive on delivering solutions to complex problems while pushing boundaries to innovate. 
+                        With a major in Mechanical Engineering and minors in Computer Science and Entrepreneurship, 
+                        I am dedicated to revolutionizing the field through transformative ideas and technology. 
+                        Ready to contribute my skills and creativity to drive innovation and impact.</p>
+                </div>
+            </div>
         </div>
     </div>
-    {/* <Carousel className='img-zone'>
-       <a target="blank" rel='noreferrer' href='https://rps-topaz.vercel.app/'>
-           <img src={RPS} alt='rps'></img>
-           <p>RPS is a simple project with calls to Socket JS to establisha winner and loser 
-           between a computer picking Rock Paper Scissors and a human. Later, add ons would be online multiplayer with friends.</p>
-        </a>
-      <a target="blank" rel='noreferrer' href='https://sort-me.vercel.app/'>
-          <img src={SortMe} alt='sortme'></img>
-    </a>
-        <p>Sort Me is a simple project with calls to Socket JS to establisha winner and loser 
-           between a computer picking Rock Paper Scissors and a human. Later, add ons would be online multiplayer with friends.</p>
-	</Carousel> */}
-</div>
-<Loader type='pacman'/>
-
-</>
-
-
-)}
+    <Loader type='pacman'/>
+    </>
+    )
+}
 
 export default Projects
-

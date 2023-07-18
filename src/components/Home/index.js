@@ -6,7 +6,7 @@ import AnimatedLetters from '../AnimatedLetters';
 import React, { useState, useEffect} from 'react';
 import Loader from 'react-loaders';
 import LogoS from '../../assets/images/FadeyProfile.jpg'
-import Projects from "../Projects"
+import Slide from "../Slide"
 import '../../grid.css'
 
 const Home = () => {
@@ -64,7 +64,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='col1'>
-                        <Projects></Projects>
+                        <Slide></Slide>
                     </div>
                 </div>
                 {/* <div className='col7'>
